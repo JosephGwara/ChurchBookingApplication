@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.name_txt = new System.Windows.Forms.TextBox();
             this.surname_txt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,24 +42,23 @@
             this.email_txt = new System.Windows.Forms.TextBox();
             this.contact_txt = new System.Windows.Forms.TextBox();
             this.submit_btn = new System.Windows.Forms.Button();
-            this.newVisitor_ComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // serviceBooking_ComboBox
             // 
             this.serviceBooking_ComboBox.FormattingEnabled = true;
             this.serviceBooking_ComboBox.Items.AddRange(new object[] {
-            "HQ Campus",
-            "Morning Service ",
-            "Evening Service",
-            "Prayer Night",
-            "Brooklyn Campus",
-            "Morning Service",
-            "Evening Service",
-            "Potch Campus",
-            "First Service",
-            "Second Service",
-            "Prayer Night"});
+            "*******HQ Campus*******",
+            "1.Morning Service(08:55)",
+            "2.Evening Service(16:55)",
+            "3.Prayer Night(21:30)",
+            "*****Brooklyn Campus*****",
+            "4.Morning Service(09:00)",
+            "5.Evening Service(17:00)",
+            "*****Potch Campus******",
+            "6.First Service(16:00)",
+            "7.Second Service(18:00)",
+            "8.Prayer Night(21:30)"});
             this.serviceBooking_ComboBox.Location = new System.Drawing.Point(34, 59);
             this.serviceBooking_ComboBox.MaxDropDownItems = 15;
             this.serviceBooking_ComboBox.Name = "serviceBooking_ComboBox";
@@ -90,31 +88,22 @@
             // 
             // name_txt
             // 
-            this.name_txt.Location = new System.Drawing.Point(247, 141);
+            this.name_txt.Location = new System.Drawing.Point(37, 148);
             this.name_txt.Name = "name_txt";
-            this.name_txt.Size = new System.Drawing.Size(167, 20);
+            this.name_txt.Size = new System.Drawing.Size(175, 20);
             this.name_txt.TabIndex = 4;
             // 
             // surname_txt
             // 
-            this.surname_txt.Location = new System.Drawing.Point(37, 276);
+            this.surname_txt.Location = new System.Drawing.Point(248, 148);
             this.surname_txt.Name = "surname_txt";
             this.surname_txt.Size = new System.Drawing.Size(174, 20);
             this.surname_txt.TabIndex = 5;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Are you a new visitor?";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 125);
+            this.label4.Location = new System.Drawing.Point(34, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 7;
@@ -123,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 260);
+            this.label5.Location = new System.Drawing.Point(245, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 8;
@@ -132,7 +121,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(244, 260);
+            this.label6.Location = new System.Drawing.Point(31, 251);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 13);
             this.label6.TabIndex = 14;
@@ -158,16 +147,16 @@
             // 
             // ID_txt
             // 
-            this.ID_txt.Location = new System.Drawing.Point(247, 276);
+            this.ID_txt.Location = new System.Drawing.Point(34, 267);
             this.ID_txt.Name = "ID_txt";
-            this.ID_txt.Size = new System.Drawing.Size(167, 20);
+            this.ID_txt.Size = new System.Drawing.Size(177, 20);
             this.ID_txt.TabIndex = 11;
             // 
             // email_txt
             // 
             this.email_txt.Location = new System.Drawing.Point(247, 209);
             this.email_txt.Name = "email_txt";
-            this.email_txt.Size = new System.Drawing.Size(167, 20);
+            this.email_txt.Size = new System.Drawing.Size(175, 20);
             this.email_txt.TabIndex = 10;
             // 
             // contact_txt
@@ -179,31 +168,19 @@
             // 
             // submit_btn
             // 
-            this.submit_btn.Location = new System.Drawing.Point(119, 350);
+            this.submit_btn.Location = new System.Drawing.Point(118, 361);
             this.submit_btn.Name = "submit_btn";
-            this.submit_btn.Size = new System.Drawing.Size(212, 23);
+            this.submit_btn.Size = new System.Drawing.Size(212, 33);
             this.submit_btn.TabIndex = 22;
             this.submit_btn.Text = "Submit";
             this.submit_btn.UseVisualStyleBackColor = true;
             this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
-            // 
-            // newVisitor_ComboBox
-            // 
-            this.newVisitor_ComboBox.FormattingEnabled = true;
-            this.newVisitor_ComboBox.Items.AddRange(new object[] {
-            "YES",
-            "NO"});
-            this.newVisitor_ComboBox.Location = new System.Drawing.Point(37, 140);
-            this.newVisitor_ComboBox.Name = "newVisitor_ComboBox";
-            this.newVisitor_ComboBox.Size = new System.Drawing.Size(174, 21);
-            this.newVisitor_ComboBox.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 418);
-            this.Controls.Add(this.newVisitor_ComboBox);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -213,7 +190,6 @@
             this.Controls.Add(this.contact_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.surname_txt);
             this.Controls.Add(this.name_txt);
             this.Controls.Add(this.label2);
@@ -237,7 +213,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox name_txt;
         private System.Windows.Forms.TextBox surname_txt;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -247,7 +222,6 @@
         private System.Windows.Forms.TextBox email_txt;
         private System.Windows.Forms.TextBox contact_txt;
         private System.Windows.Forms.Button submit_btn;
-        private System.Windows.Forms.ComboBox newVisitor_ComboBox;
     }
 }
 
