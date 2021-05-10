@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.serviceBooking_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.email_txt = new System.Windows.Forms.TextBox();
             this.contact_txt = new System.Windows.Forms.TextBox();
             this.submit_btn = new System.Windows.Forms.Button();
+            this.action_lbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // serviceBooking_ComboBox
@@ -176,11 +179,29 @@
             this.submit_btn.UseVisualStyleBackColor = true;
             this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
+            // action_lbl
+            // 
+            this.action_lbl.AutoSize = true;
+            this.action_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.action_lbl.ForeColor = System.Drawing.Color.Red;
+            this.action_lbl.Location = new System.Drawing.Point(32, 306);
+            this.action_lbl.Name = "action_lbl";
+            this.action_lbl.Size = new System.Drawing.Size(42, 16);
+            this.action_lbl.TabIndex = 23;
+            this.action_lbl.Text = "timer";
+            this.action_lbl.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 4000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 418);
+            this.Controls.Add(this.action_lbl);
             this.Controls.Add(this.submit_btn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -222,6 +243,8 @@
         private System.Windows.Forms.TextBox email_txt;
         private System.Windows.Forms.TextBox contact_txt;
         private System.Windows.Forms.Button submit_btn;
+        private System.Windows.Forms.Label action_lbl;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
