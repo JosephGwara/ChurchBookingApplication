@@ -54,7 +54,7 @@ namespace ChurchBookingBot
             try {
                 this.webDriver.Navigate().GoToUrl(@"https://unite180.com/church_bookings/booking.php");
             } catch (Exception e) {
-               
+                MessageBox.Show("URL does not exist","Error");
             }
 
         }
@@ -91,11 +91,38 @@ namespace ChurchBookingBot
             {
                 timer1.Enabled = true;
                 fillInForm();
+                this.Hide();
                  
-
             }
          
         }
+
+        public void confirmBooking()
+        {
+
+            try
+            {
+
+                IWebElement green = webDriver.FindElement(By.ClassName("feedbackSuccess"));
+                bool success = green.Displayed;
+                if (success == true)
+                {
+
+                    action_lbl.ForeColor.Equals(green);
+                    action_lbl.Text = "Booking has been successfully made";
+
+                }
+            }
+            catch (Exception e)
+            {
+
+
+            }
+
+        }
+
+
+
 
         public void fillInForm() {
 
@@ -154,8 +181,9 @@ namespace ChurchBookingBot
                 if (displayed == true) {
                     submit.Click();
                     timer1.Enabled = false;
-                    
-                    
+                    //add success check method
+
+                      
                 }
                 else
                 {

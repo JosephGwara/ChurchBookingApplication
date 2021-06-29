@@ -230,6 +230,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booking Bot";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
