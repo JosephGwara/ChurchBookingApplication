@@ -33,24 +33,28 @@ namespace ChurchBookingBot
         {
             DownloadWebDriver();
             OpenPage();
-
+            //downloading web driver if non existant and opeing target page on pageload
         }
 
         public void DownloadWebDriver()
         {
+            //checks to see if a web driver is present and downloads an appropriate one if not
             try { 
                  new DriverManager().SetUpDriver(new ChromeConfig());
-            webDriver = new ChromeDriver(); }
+            webDriver = new ChromeDriver();
+            }
                 catch (Exception e) {
                 MessageBox.Show("Please make sure you're connected to the internet","Error",MessageBoxButtons.OK
                     ,MessageBoxIcon.Error);
             
             }
-           
+            
         }
       
 
         public void OpenPage() {
+
+
             try {
                 this.webDriver.Navigate().GoToUrl(@"https://unite180.com/church_bookings/booking.php");
             } catch (Exception e) {
@@ -59,7 +63,7 @@ namespace ChurchBookingBot
 
         }
         public void refreshPage()
-        {
+        {  //Refreshes the page if a certain element is found on the page
            IWebElement banner = webDriver.FindElement(By.ClassName("m-portlet__body"));
            bool isDisplayed = banner.Displayed;
             if(isDisplayed == true) {
@@ -70,6 +74,7 @@ namespace ChurchBookingBot
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
+            //Handles the conditions for the form submition 
 
             if (serviceBooking_ComboBox.Text.Equals("*******HQ Campus*******") ||
                 serviceBooking_ComboBox.Text.Equals("*****Brooklyn Campus*****") ||
@@ -91,7 +96,7 @@ namespace ChurchBookingBot
             {
                 timer1.Enabled = true;
                 fillInForm();
-                this.Hide();
+               
                  
             }
          
@@ -125,6 +130,7 @@ namespace ChurchBookingBot
 
 
         public void fillInForm() {
+            //Handles the form inputs 
 
             ServiceBooking();
 
@@ -163,7 +169,7 @@ namespace ChurchBookingBot
                     SelectElement selectQ3 = new SelectElement(question3);
                     selectQ3.SelectByValue("No");
 
-
+                //Solving the sum in  the form
                 string num1 = webDriver.FindElement(By.Id("num1")).GetAttribute("value");
                 string num2 = webDriver.FindElement(By.Id("num2")).GetAttribute("value");
                 int numOne = Convert.ToInt32(num1);
@@ -196,7 +202,8 @@ namespace ChurchBookingBot
             
         }
         public void ServiceBooking()
-        {
+        { 
+            //The logic for the selection of the service
             string selection = serviceBooking_ComboBox.Text;
 
 
@@ -247,7 +254,7 @@ namespace ChurchBookingBot
         
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
+        {  //Calls these methods every 4 seconds until condtions are met 
             refreshPage();
             fillInForm();
 
