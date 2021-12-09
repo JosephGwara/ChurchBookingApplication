@@ -44,7 +44,7 @@ namespace ChurchBookingBot
             webDriver = new ChromeDriver();
             }
                 catch (Exception e) {
-                MessageBox.Show("Please make sure you're connected to the internet","Error",MessageBoxButtons.OK
+                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK
                     ,MessageBoxIcon.Error);
             
             }
@@ -58,7 +58,7 @@ namespace ChurchBookingBot
             try {
                 this.webDriver.Navigate().GoToUrl(@"https://unite180.com/church_bookings/booking.php");
             } catch (Exception e) {
-                MessageBox.Show("URL does not exist","Error");
+                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -120,7 +120,7 @@ namespace ChurchBookingBot
             }
             catch (Exception e)
             {
-
+                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             }
 
@@ -248,7 +248,11 @@ namespace ChurchBookingBot
 
                 }
             }
-            catch (Exception e) { }
+            catch (Exception e) {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            
+            }
 
         }
         

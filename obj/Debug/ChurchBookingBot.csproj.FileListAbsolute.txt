@@ -27,3 +27,5 @@ C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\bin\Debug\WebDriver.xml
 C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\obj\Debug\ChurchBookingBot.csproj.CopyComplete
 C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\bin\Debug\WebDriver.Support.dll
 C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\bin\Debug\WebDriver.Support.xml
+C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\obj\Debug\ChurchBookingBot.Login.resources
+C:\Users\Joseph Gwara\source\repos\ChurchBookingBot\obj\Debug\ChurchBookingBot.Register.resources
